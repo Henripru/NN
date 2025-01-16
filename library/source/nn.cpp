@@ -7,7 +7,7 @@ void NN::AddLayer(const Layer &layer)
 
 void NN::AddLayers(const std::vector<Layer> &layers)
 {
-    for (auto layer : layers)
+    for (const Layer& layer : layers)
     {
         AddLayer(layer);
     }

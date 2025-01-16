@@ -3,6 +3,9 @@ project(libnn)
 
 set(CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_subdirectory(library)
-add_subdirectory(apps)
+if(LIBNN_BUILD_SAMPLE)
+    add_subdirectory(sample)
+endif()

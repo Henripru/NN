@@ -19,4 +19,5 @@ set(SOURCES
 )
 add_library(${PROJECT_NAME} ${SOURCES})
 target_include_directories(${PROJECT_NAME} PUBLIC include)
-target_link_libraries(${PROJECT_NAME} PUBLIC eigen)
+target_link_libraries(${PROJECT_NAME} PUBLIC eigen matplotlib-cpp)
+target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_17)

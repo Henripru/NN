@@ -1,0 +1,38 @@
+{
+    "version": 10,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 31,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "ninja_debug",
+            "displayName": "Debug (Ninja)",
+            "description": "Debug build using Ninja generator",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/ninja/debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "LIBNN_BUILD_SAMPLE": "ON"
+            }
+        },
+        {
+            "name": "ninja_release",
+            "displayName": "Release (Ninja)",
+            "description": "Release build using Ninja generator",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/ninja/release",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "LIBNN_BUILD_SAMPLE": "ON"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "Default",
+            "configurePreset": "ninja_debug"
+        }
+    ]
+  }
